@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html>
+<title> 
+   Gmail
+</title>
+
+<head>
+  <script>
+function getvalues(){
+//alert("hi");
+    var X = document.forms["myForm"]["fname"].value;
+    var Y = document.forms["myForm"]["password"].value;
+    if(X == "" && Y == "")
+    {
+        document.forms["myForm"]["fname"].style.borderColor="red";
+        document.forms["myForm"]["password"].style.borderColor="red";
+        return false;
+    }
+}
+
+    </script>
+</head>
+<body>
+    <form name="myForm" onclick="return getvalues()">
+    Name: 
+    <input type="text" name="fname"><br> <br>
+    Password:
+    <input type="text" name="password"> <br> <br>
+    <input type="date" name="date" max="2018-05-31" min="2018-05-30">  
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
